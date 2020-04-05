@@ -1,11 +1,11 @@
 <template>
-<div class="bgImage">
+<div>
   <b-container>
   <div class="TopHeader">
     <b-row>
       <b-col>
         <b-navbar toggleable="lg" variant="faded" type="dark">
-          <b-col>
+          <b-col cols="auto">
             <i class="fas fa-ticket-alt fa-3x"></i>
           </b-col>
           <b-col>
@@ -22,7 +22,7 @@
           <b-collapse class="nav-text-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
               <b-col>
-                <b-button class="loginButton" size="sm" variant="link">
+                <b-button class="loginButton" variant="link">
                   <i class="fas fa-fingerprint"></i>
                   <b-nav-text class="loginText">
                     login
@@ -53,33 +53,6 @@
     </b-row>
   </div>
   </b-container>
-  <b-container>
-    <b-row align-h="start" align-v="center">
-      <b-col cols="10">
-        <h1 class="title" >Book Me In Scotty</h1>
-      </b-col>
-      <b-col cols="2">
-        </b-col>
-    </b-row>
-        <b-row aligh-h="start">
-      <b-col cols="10">
-        <h2 class="text-left"><strong>Organize, Host and Share your Events</strong></h2>
-      </b-col>
-      <b-col cols="1">
-        </b-col>
-    </b-row>
-          <b-row class="btnRow">     
-      <b-button variant="light" class="btnIndi">
-        <i class="fas fa-users"></i>
-        For Individuals
-        </b-button>
-      <b-button variant="success" class="btnBus">
-        <i class="fas fa-shopping-cart"></i>
-        For Business
-        </b-button>
-      <b-button variant="light">Docs</b-button>
-    </b-row>
-  </b-container>
   </div>
 </template>
 
@@ -95,23 +68,11 @@ export default {
 .Title {
   color: white;
 }
-.title {
-  font-family: "Noto Sans HK" "sans-serif";
-  color: orange;
-  font-size: 80px;
-  padding-top: 80px;
-  text-align: left;
-  }
-  .text-left {
-    font-family: "Noto Sans HK" "sans-serif";
-    color: white;
-    font-size: 90px;
-  }
 .subHeading {
   float: left;
 }
 .fa-globe {
-  padding-top: 0px;
+  padding-top: 11px;
   padding-right: 0px;
 }
 .fa-fingerprint {
@@ -133,30 +94,4 @@ export default {
   background-color: palevioletred;
   border-color: transparent;
 }
-.bgImage {
-  background-image: url("https://i.imgur.com/etg5hVx.jpg");
-  height: 1100px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.btnRow {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.btnIndi {
-  width: 250px;
-  color: rgba(1, 90, 255, 0.87);
-  border-width: 10px;
-  border-color: transparent;
-  margin-right: 10px;
-}
-.btnBus {
-  width: 230px;
-  color: white;
-  border-width: 10px;
-  border-color: transparent;
-  margin-right: 10px;
-}
-
 </style>
