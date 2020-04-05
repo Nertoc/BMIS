@@ -1,16 +1,31 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <b-container class="body" fluid="100%">
+    <TopHeader />
+    <titlePage />
+    </b-container>
+  <div>
+    
     </div>
-    <router-view />
   </div>
 </template>
 
-<style lang="scss">
+<script>
+import TopHeader from "@/components/TopHeader.vue";
+import titlePage from "@/components/TitlePage.vue";
+
+export default {
+  components: {
+    TopHeader,
+    titlePage
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap");
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Noto Sans HK", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -18,7 +33,7 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 50px;
 
   a {
     font-weight: bold;
@@ -29,4 +44,5 @@
     }
   }
 }
+
 </style>
