@@ -40,7 +40,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(110vh - 60px);
+  object-fit: cover;
 }
 
 #nav {
