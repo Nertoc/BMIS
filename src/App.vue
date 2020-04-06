@@ -1,14 +1,19 @@
 <template>
   <div id="app">
     <div class="bgImage">
-      <b-container class="body" fluid="100%">
+      <b-container class="body">
         <TopHeader />
         <titlePage />
       </b-container>
     </div>
     <div>
-      <upcomingEvents />
+      <b-container>
+        <upcomingEvents />
+      </b-container>
     </div>
+    <div class="catImg">
+      <eventCategories />
+      </div>
   </div>
 </template>
 
@@ -16,12 +21,14 @@
 import TopHeader from "@/components/TopHeader.vue";
 import titlePage from "@/components/TitlePage.vue";
 import upcomingEvents from "@/components/UpcomingEvents.vue";
+import eventCategories from "@/components/eventCategories.vue";
 
 export default {
   components: {
     TopHeader,
     titlePage,
-    upcomingEvents
+    upcomingEvents,
+    eventCategories,
   }
 };
 </script>
@@ -37,6 +44,13 @@ export default {
 }
 .bgImage {
   background-image: url("https://i.imgur.com/etg5hVx.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+.catImg {
+  background-image: url("https://i.imgur.com/lL0gTxj.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
