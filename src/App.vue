@@ -13,6 +13,9 @@
     <div>
       <manageEvents />
     </div>
+    <div>
+      <bmisFooter />
+    </div>
   </div>
 </template>
 
@@ -22,6 +25,7 @@ import titlePage from "@/components/TitlePage.vue";
 import upcomingEvents from "@/components/UpcomingEvents.vue";
 import eventCategories from "@/components/eventCategories.vue";
 import manageEvents from "@/components/EventManagement.vue";
+import bmisFooter from "@/components/footer.vue";
 
 export default {
   components: {
@@ -29,7 +33,8 @@ export default {
     titlePage,
     upcomingEvents,
     eventCategories,
-    manageEvents
+    manageEvents,
+    bmisFooter
   }
 };
 </script>

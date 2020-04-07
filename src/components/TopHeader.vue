@@ -20,7 +20,7 @@
                     login
                   </b-nav-text>
                 </b-button>
-                <b-nav-item-dropdown>
+                <b-nav-item-dropdown class="langBut">
                   <template v-slot:button-content>
                     <i class="fas fa-globe fa-1x"></i>
                     English
@@ -53,6 +53,7 @@ export default {
 
 .Title {
   color: white;
+  padding: 20px;
 }
 .fa-ticket {
   float: left;
@@ -71,9 +72,15 @@ export default {
 .loginButton {
   width: 110px;
   background-color: transparent;
+  margin-right: 20px;
+}
+.langBut {
+  margin-right: 20px;
 }
 .loginText {
   float: right;
+  
+
 }
 .browseEvents {
   width: 175px;

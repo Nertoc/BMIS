@@ -14,19 +14,12 @@
           <h3>Upcoming Events</h3>
         </b-col>
       </b-row>
-      <b-row
-        cols="1"
-        cols-md="2"
-        cols-lg="3"
-        align-h="center"
-        align-v="center"
-        class="justify-content-center"
-      >
+      <b-row cols="1" cols-md="2" cols-lg="3" align-h="center">
         <b-col>
           <b-card
             no-body="true"
             tag="article"
-            style="max-width: 20rem; min-width: 15rem;"
+            style="max-width: 25rem; min-width: 15rem;"
             class="carding"
             align="left"
           >
@@ -72,7 +65,7 @@
           <b-card
             no-body="true"
             tag="article"
-            style="max-width: 20rem; min-width: 15rem;"
+            style="max-width: 25rem; min-width: 15rem;"
             class="carding"
             align="left"
           >
@@ -94,6 +87,7 @@
                 alt="Conference Meeting"
                 top="true"
                 style="min-height: 15rem; min-width: 15rem;"
+                mx-auto
               >
               </b-card-img>
             </div>
@@ -118,7 +112,7 @@
           <b-card
             no-body="true"
             tag="article"
-            style="max-width: 20rem; min-width: 15rem;"
+            style="max-width: 25rem; min-width: 15rem;"
             class="carding"
             align="left"
           >
@@ -226,7 +220,7 @@ export default {
 .eventType {
   position: absolute;
   left: 0px;
-  top: 265px;
+  top: 211px;
   background-color: rgb(106, 182, 207);
   color: white;
   width: 60px;
