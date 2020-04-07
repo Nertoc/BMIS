@@ -1,56 +1,44 @@
 <template>
   <div>
-    <div class="TopHeader">
-      <b-row>
+    <b-container>
+      <b-row style="width: 110%" align-h="centre">
         <b-col>
-          <b-navbar toggleable="lg" variant="faded" type="dark">
-            <b-col cols="auto">
-              <i class="fas fa-ticket-alt fa-3x"></i>
-            </b-col>
-            <b-col>
-              <b-navbar-brand class="Title">
-                <b class="h3">Book Me In Scotty</b>
-                <div>
-                  <small class="subHeading">Host and Share Events!</small>
-                </div>
-              </b-navbar-brand>
-            </b-col>
-            <b-col>
-              <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-            </b-col>
-            <b-collapse class="nav-text-collapse" is-nav>
+          <b-navbar toggleable="xl" variant="faded" type="dark">
+            <i class="fas fa-ticket-alt fa-3x"></i>
+            <b-navbar-brand class="Title">
+              <b class="h3">BMIS</b>
+              <div>
+                <small class="subHeading"></small>
+              </div>
+            </b-navbar-brand>
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+            <b-collapse id="nav-collapse" is-nav>
               <b-navbar-nav class="ml-auto">
-                <b-col cols="auto">
-                  <b-button class="loginButton" variant="link">
-                    <i class="fas fa-fingerprint"></i>
-                    <b-nav-text class="loginText">
-                      login
-                    </b-nav-text>
-                  </b-button>
-                </b-col>
-                <b-col cols="auto">
-                  <b-nav-item-dropdown>
-                    <template v-slot:button-content>
-                      <i class="fas fa-globe fa-1x"></i>
-                      English
-                    </template>
-                    <b-dropdown-item href="#">EN</b-dropdown-item>
-                    <b-dropdown-item href="#">GR</b-dropdown-item>
-                    <b-dropdown-item href="#">RU</b-dropdown-item>
-                    <b-dropdown-item href="#">FA</b-dropdown-item>
-                  </b-nav-item-dropdown>
-                </b-col>
-                <b-col cols="auto">
-                  <b-button class="browseEvents" size="sm">
-                    Browse Events
-                  </b-button>
-                </b-col>
+                <b-button class="loginButton" variant="link">
+                  <i class="fas fa-fingerprint"></i>
+                  <b-nav-text class="loginText">
+                    login
+                  </b-nav-text>
+                </b-button>
+                <b-nav-item-dropdown>
+                  <template v-slot:button-content>
+                    <i class="fas fa-globe fa-1x"></i>
+                    English
+                  </template>
+                  <b-dropdown-item href="#">EN</b-dropdown-item>
+                  <b-dropdown-item href="#">GR</b-dropdown-item>
+                  <b-dropdown-item href="#">RU</b-dropdown-item>
+                  <b-dropdown-item href="#">FA</b-dropdown-item>
+                </b-nav-item-dropdown>
+                <b-button class="browseEvents" size="sm">
+                  Browse Events
+                </b-button>
               </b-navbar-nav>
             </b-collapse>
           </b-navbar>
         </b-col>
       </b-row>
-    </div>
+    </b-container>
   </div>
 </template>
 
@@ -65,6 +53,9 @@ export default {
 
 .Title {
   color: white;
+}
+.fa-ticket {
+  float: left;
 }
 .subHeading {
   float: left;
@@ -85,11 +76,14 @@ export default {
   float: right;
 }
 .browseEvents {
-  width: 150px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  float: right;
+  width: 175px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
   background-color: palevioletred;
   border-color: transparent;
+  margin-top: 5px;
 }
 </style>

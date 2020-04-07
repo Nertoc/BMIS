@@ -1,20 +1,19 @@
 <template>
-  <div id="app">
-    <div class="bgImage">
-      <b-container class="body">
+    <div id="app">
+      <div class="bgImage">
         <TopHeader />
         <titlePage />
-      </b-container>
-    </div>
-    <div>
-      <b-container>
-        <upcomingEvents />
-      </b-container>
-    </div>
-    <div class="catImg">
-      <eventCategories />
       </div>
-  </div>
+      <div>
+        <upcomingEvents />
+      </div>
+      <div class="catImg">
+        <eventCategories />
+      </div>
+      <div>
+        <manageEvents />
+      </div>
+    </div>
 </template>
 
 <script>
@@ -22,6 +21,7 @@ import TopHeader from "@/components/TopHeader.vue";
 import titlePage from "@/components/TitlePage.vue";
 import upcomingEvents from "@/components/UpcomingEvents.vue";
 import eventCategories from "@/components/eventCategories.vue";
+import manageEvents from "@/components/EventManagement.vue";
 
 export default {
   components: {
@@ -29,6 +29,7 @@ export default {
     titlePage,
     upcomingEvents,
     eventCategories,
+    manageEvents
   }
 };
 </script>
@@ -48,6 +49,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
+  height: 100%;
 }
 .catImg {
   background-image: url("https://i.imgur.com/lL0gTxj.jpg");
@@ -55,6 +57,7 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
+  height: 100%;
 }
 
 #nav {
@@ -69,5 +72,4 @@ export default {
     }
   }
 }
-
 </style>

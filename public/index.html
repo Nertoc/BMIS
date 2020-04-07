@@ -13,8 +13,24 @@
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <div class="overflow-hidden">
+      <div class="overflow-visible">
     <div id="app"></div>
+  </div>
+</div>
+
     <!-- built files will be auto injected -->
   </body>
 </html>
 
+<style>
+  @media (max-width: 766px){
+    .overflow-hidden {
+      overflow-x: hidden;
+    }
+    .overflow-visible {
+      overflow-x: visible;
+    }
+  }
+
+</style>
