@@ -1,66 +1,66 @@
 <template>
   <div>
     <b-container>
-    <b-row style="height: 200px" cols="1" align-h="center" align-v="end">
-      <b-col class="title">
-        <h2>Event Categories</h2>
-      </b-col>
-    </b-row>
-    <b-row cols="1" cols-md="1" cols-lg="4" align-content="start">
-      <b-col>
-        <div class="eventOne">
-          <div class="eventOverlay1">
-            <h5>Business and Seminars</h5>
+      <b-row style="height: 200px" cols="1" align-h="center" align-v="end">
+        <b-col class="title">
+          <h2>Event Categories</h2>
+        </b-col>
+      </b-row>
+      <b-row cols="1" cols-md="1" cols-lg="4" align-content="start">
+        <b-col>
+          <div class="eventOne">
+            <div class="eventOverlay1">
+              <h5>Business and Seminars</h5>
+            </div>
+            <b-img
+              fluid
+              src="https://picsum.photos/600/300/?images=25"
+              alt="Image 1"
+              class="eventCardimg"
+            >
+            </b-img>
           </div>
-          <b-img
-            fluid
-            src="https://picsum.photos/600/300/?images=25"
-            alt="Image 1"
-            class="eventCardimg"
-          >
-          </b-img>
-        </div>
-      </b-col>
-      <b-col>
-        <div class="eventOne">
-          <div class="eventOverlay2">
-            <h5>Sports and Fitness</h5>
+        </b-col>
+        <b-col>
+          <div class="eventOne">
+            <div class="eventOverlay2">
+              <h5>Sports and Fitness</h5>
+            </div>
+            <b-img
+              fluid
+              src="https://picsum.photos/600/300/?images=26"
+              alt="Image 2"
+              class="eventCardimg2"
+            ></b-img>
           </div>
-          <b-img
-            fluid
-            src="https://picsum.photos/600/300/?images=26"
-            alt="Image 2"
-            class="eventCardimg2"
-          ></b-img>
-        </div>
-      </b-col>
-      <b-col>
-        <div class="eventOne">
-          <div class="eventOverlay3">
-            <h5>Music and Concerts</h5>
+        </b-col>
+        <b-col>
+          <div class="eventOne">
+            <div class="eventOverlay3">
+              <h5>Music and Concerts</h5>
+            </div>
+            <b-img
+              fluid
+              src="https://picsum.photos/600/300/?images=27"
+              alt="Image 3"
+              class="eventCardimg3"
+            ></b-img>
           </div>
-          <b-img
-            fluid
-            src="https://picsum.photos/600/300/?images=27"
-            alt="Image 3"
-            class="eventCardimg3"
-          ></b-img>
-        </div>
-      </b-col>
-      <b-col>
-        <div class="eventOne">
-          <div class="eventOverlay4">
-            <h5>Food and Drink</h5>
+        </b-col>
+        <b-col>
+          <div class="eventOne">
+            <div class="eventOverlay4">
+              <h5>Food and Drink</h5>
+            </div>
+            <b-img
+              fluid
+              src="https://picsum.photos/600/300/?images=28"
+              alt="Image 4"
+              class="eventCardimg4"
+            ></b-img>
           </div>
-          <b-img
-            fluid
-            src="https://picsum.photos/600/300/?images=28"
-            alt="Image 4"
-            class="eventCardimg4"
-          ></b-img>
-        </div>
-      </b-col>
-    </b-row>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>

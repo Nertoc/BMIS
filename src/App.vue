@@ -1,19 +1,19 @@
 <template>
-    <div id="app">
-      <div class="bgImage">
-        <TopHeader />
-        <titlePage />
-      </div>
-      <div>
-        <upcomingEvents />
-      </div>
-      <div class="catImg">
-        <eventCategories />
-      </div>
-      <div>
-        <manageEvents />
-      </div>
+  <div id="app">
+    <div class="bgImage">
+      <TopHeader />
+      <titlePage />
     </div>
+    <div>
+      <upcomingEvents />
+    </div>
+    <div class="catImg">
+      <eventCategories />
+    </div>
+    <div>
+      <manageEvents />
+    </div>
+  </div>
 </template>
 
 <script>
