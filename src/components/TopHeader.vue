@@ -14,7 +14,7 @@
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
               <b-navbar-nav class="ml-auto">
-                <b-button class="loginButton" variant="link">
+                <b-button class="loginButton" variant="link" v-b-modal.modal-1>
                   <i class="fas fa-fingerprint"></i>
                   <b-nav-text class="loginText">
                     login
@@ -39,6 +39,25 @@
         </b-col>
       </b-row>
     </b-container>
+    <div>
+      <b-modal id="modal-1" title="BootstrapVue">
+        <label class="sr-only" for="inline-form-input-name">Name</label>
+    <b-input
+      id="inline-form-input-name"
+      class="mb-2 mr-sm-2 mb-sm-0"
+      placeholder="Jane Doe"
+    ></b-input>
+
+    <label class="sr-only" for="inline-form-input-username">Username</label>
+    <b-input-group prepend="@" class="mb-2 mr-sm-2 mb-sm-0">
+      <b-input id="inline-form-input-username" placeholder="Username"></b-input>
+    </b-input-group>
+
+    <b-form-checkbox class="mb-2 mr-sm-2 mb-sm-0">Remember me</b-form-checkbox>
+
+    <b-button variant="primary">Save</b-button>
+      </b-modal>
+    </div>
   </div>
 </template>
 
@@ -79,8 +98,6 @@ export default {
 }
 .loginText {
   float: right;
-  
-
 }
 .browseEvents {
   width: 175px;
