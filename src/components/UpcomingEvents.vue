@@ -16,6 +16,7 @@
       </b-row>
       <b-row cols="1" cols-md="2" cols-lg="3" align-h="center">
         <b-col>
+          <jobs-card />
           <b-card
             no-body="true"
             tag="article"

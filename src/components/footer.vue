@@ -50,6 +50,7 @@
           </b-col>
         </b-row>
       </b-container>
+      <hr class="horZ" />
       <div>
         <b-container fluid class="footercont">
           <b-row>
@@ -66,6 +67,7 @@
       </div>
     </b-container>
   </div>
+  
 </template>
 
 <script>
@@ -103,5 +105,8 @@ export default {
 .fas {
   padding: 10px;
   padding-left: 0px;
+}
+.horZ {
+  background-color: blanchedalmond;
 }
 </style>

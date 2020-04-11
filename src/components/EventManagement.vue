@@ -14,7 +14,7 @@
       <b-row cols="1" cols-md="2" cols-lg="4" align-h="center" align-v="center">
         <b-col class="icons" cols="auto">
           <i class="fas fa-calendar-alt fa-4x"></i>
-          <H3>1. plan the event event</H3>
+          <H3>1. plan the event</H3>
           <h6>From idea to action plan</h6>
         </b-col>
         <b-col class="icons" cols="auto">
@@ -29,7 +29,7 @@
         </b-col>
         <b-col class="icons" cols="auto">
           <i class="fas fa-hotel fa-4x"></i>
-          <h3>4. Host the event event</h3>
+          <h3>4. Host the event</h3>
           <h6>Host your event and collect feedback</h6>
         </b-col>
       </b-row>

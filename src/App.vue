@@ -16,6 +16,7 @@
     <div>
       <bmisFooter />
     </div>
+    <!-- add section above the green inside div containers -->
   </div>
 </template>
 
@@ -57,7 +58,7 @@ export default {
   height: 100%;
 }
 .catImg {
-  background-image: url("https://i.imgur.com/lL0gTxj.jpg");
+  background-image: url("./assets/iStock-1181169462.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
