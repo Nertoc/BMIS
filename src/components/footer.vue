@@ -19,19 +19,33 @@
             <h5 class="title">Contact Us</h5>
             <ul>
               <li class="list-unstyled"><a href="#!">Send us a Message</a></li>
-              <li class="list-unstyled"><a href="#!">85 Golden Street, Darlinghurst ERP 2019, AUSGRE</a></li>
-              <li class="list-unstyled"><a href="#!"><i class="fas fa-envelope"></i>info@bmis.com</a></li>
-              <li class="list-unstyled"><a href="#!"><i class="fas fa-mobile-alt"></i>1800 808 258</a></li>
+              <li class="list-unstyled">
+                85 Golden Street, Darlinghurst ERP 2019, AUSGRE
+              </li>
+              <li class="list-unstyled">
+                <i class="fas fa-envelope"></i>info@bmis.com
+              </li>
+              <li class="list-unstyled">
+                <i class="fas fa-mobile-alt"></i>1800 808 258
+              </li>
             </ul>
           </b-col>
           <b-col sm="3">
             <h5 class="title">Our Socials</h5>
-            <h6 class="subtitle"> find us on our socials </h6>
+            <h6 class="subtitle">find us on our socials</h6>
             <ul class="list-group list-group-horizontal">
-              <li class="list-unstyled"><a href="#!"><i class="fab fa-facebook-square fa-2x"></i></a></li>
-              <li class="list-unstyled"><a href="#!"><i class="fab fa-linkedin fa-2x"></i></a></li>
-              <li class="list-unstyled"><a href="#!"><i class="fab fa-instagram-square fa-2x"></i></a></li>
-              <li class="list-unstyled"><a href="#!"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+              <li class="list-unstyled">
+                <a href="#!"><i class="fab fa-facebook-square fa-2x"></i></a>
+              </li>
+              <li class="list-unstyled">
+                <a href="#!"><i class="fab fa-linkedin fa-2x"></i></a>
+              </li>
+              <li class="list-unstyled">
+                <a href="#!"><i class="fab fa-instagram-square fa-2x"></i></a>
+              </li>
+              <li class="list-unstyled">
+                <a href="#!"><i class="fab fa-twitter-square fa-2x"></i></a>
+              </li>
             </ul>
           </b-col>
         </b-row>

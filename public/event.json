@@ -1,0 +1,19 @@
+{
+    "startDate": 1413384452,
+    "endDate": 1413394452,
+    "ticketType": "free",
+    "catergory": "Business & Seminars",
+    "eventName": "Global Innovation Conference",
+    "summary": "Highlights on global breakthroughts in IT industry. ",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+   ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+   voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "imageURL": "https://images.pexels.com/photos/705792/pexels-photo-705792.jpeg",
+    "order": -1,
+    "id": "4f47d1fe-f25a-4f9e-a91a-c8fb0668e99a",
+    "additionalInfos": [],
+    "dateCreated": 1421692929323,
+    "version": 0
+   }

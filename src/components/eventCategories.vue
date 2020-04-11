@@ -61,8 +61,7 @@
           </div>
         </b-col>
       </b-row>
-      <b-row style="height: 100px">
-        </b-row>
+      <b-row style="height: 100px"></b-row>
     </b-container>
   </div>
 </template>
