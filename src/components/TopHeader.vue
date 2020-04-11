@@ -14,25 +14,35 @@
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
               <b-navbar-nav class="ml-auto">
-                <b-button class="loginButton" variant="link" v-b-modal.modal-1>
-                  <i class="fas fa-fingerprint"></i>
-                  <b-nav-text class="loginText">
-                    login
-                  </b-nav-text>
-                </b-button>
-                <b-nav-item-dropdown class="langBut">
-                  <template v-slot:button-content>
-                    <i class="fas fa-globe fa-1x"></i>
-                    English
-                  </template>
-                  <b-dropdown-item href="#">EN</b-dropdown-item>
-                  <b-dropdown-item href="#">GR</b-dropdown-item>
-                  <b-dropdown-item href="#">RU</b-dropdown-item>
-                  <b-dropdown-item href="#">FA</b-dropdown-item>
-                </b-nav-item-dropdown>
-                <b-button class="browseEvents" size="sm">
-                  Browse Events
-                </b-button>
+                <div class="loginClass">
+                  <b-button
+                    class="loginButton"
+                    variant="link"
+                    v-b-modal.modal-1
+                  >
+                    <i class="fas fa-fingerprint"></i>
+                    <b-nav-text class="loginText">
+                      login
+                    </b-nav-text>
+                  </b-button>
+                </div>
+                <div class="langBut">
+                  <b-nav-item-dropdown right>
+                    <template v-slot:button-content>
+                      <i class="fas fa-globe fa-1x"></i>
+                      English
+                    </template>
+                    <b-dropdown-item href="#">EN</b-dropdown-item>
+                    <b-dropdown-item href="#">GR</b-dropdown-item>
+                    <b-dropdown-item href="#">RU</b-dropdown-item>
+                    <b-dropdown-item href="#">FA</b-dropdown-item>
+                  </b-nav-item-dropdown>
+                </div>
+                <div class="BrowseButton">
+                  <b-button class="browseEvents" size="sm">
+                    Browse Events
+                  </b-button>
+                </div>
               </b-navbar-nav>
             </b-collapse>
           </b-navbar>
@@ -168,5 +178,8 @@ export default {
   background-color: palevioletred;
   border-color: transparent;
   margin-top: 5px;
+}
+.langBut {
+  margin-bottom: 20px;
 }
 </style>
