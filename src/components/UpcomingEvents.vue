@@ -15,147 +15,35 @@
         </b-col>
       </b-row>
       <b-row cols="1" cols-md="2" cols-lg="3" align-h="center">
-        <b-col>
-          <jobs-card />
-          <b-card
-            no-body="true"
-            tag="article"
-            style="max-width: 20rem; min-width: 15rem;"
-            class="carding"
-            align="left"
-          >
-            <div>
-              <div>
-                <div class="overlay">
-                  <small>upcoming</small>
-                </div>
-                <div class="overlayDays">
-                  <small>223 Days</small>
-                </div>
-                <div class="eventType">
-                  <small>Free</small>
-                </div>
-              </div>
-              <b-card-img
-                class="eventCardimg"
-                src="https://i.imgur.com/qAoPWWO.jpg"
-                alt="Conference Meeting"
-                top="true"
-                style="min-height: 15rem; min-width: 15rem;"
-              >
-              </b-card-img>
-            </div>
-            <b-card-body>
-              <a href="#" class="card-link">Start Date</a>
-              <small class="line-v">|</small>
-              <a href="#" class="card-link">End Date</a>
-              <small class="line-v">|</small>
-              <a href="#" class="card-link">Location</a>
-              <b-button
-                @click="modalShow = !modalShow"
-                variant="link"
-                class="cardTitle text-left"
-              >
-                <h5>Global Marketing Conference</h5></b-button
-              >
-              <b-card-sub-title> Event Company</b-card-sub-title>
-            </b-card-body>
-            <b-card-footer class="footerTag">Business Seminars</b-card-footer>
-          </b-card>
-        </b-col>
-        <b-col>
-          <b-card
-            no-body="true"
-            tag="article"
-            style="max-width: 20rem; min-width: 15rem;"
-            class="carding"
-            align="left"
-          >
-            <div>
-              <div>
-                <div class="overlay">
-                  <small>upcoming</small>
-                </div>
-                <div class="overlayDays">
-                  <small>223 Days</small>
-                </div>
-                <div class="eventType">
-                  <small>Free</small>
-                </div>
-              </div>
-              <b-card-img
-                class="eventCardimg"
-                src="https://i.imgur.com/qAoPWWO.jpg"
-                alt="Conference Meeting"
-                top="true"
-                style="min-height: 15rem; min-width: 15rem;"
-                mx-auto
-              >
-              </b-card-img>
-            </div>
-            <b-card-body>
-              <a href="#" class="card-link">Start Date</a>
-              <small class="line-v">|</small>
-              <a href="#" class="card-link">End Date</a>
-              <small class="line-v">|</small>
-              <a href="#" class="card-link">Location</a>
-            </b-card-body>
-            <b-card-body
-              title="Global Marketing Conference"
-              class="Card-text"
-              title-tag="h5"
-              sub-title="Event Company"
-            >
-            </b-card-body>
-            <b-card-footer class="footerTag">Business Seminars</b-card-footer>
-          </b-card>
-        </b-col>
-        <b-col>
-          <b-card
-            no-body="true"
-            tag="article"
-            style="max-width: 20rem; min-width: 15rem;"
-            class="carding"
-            align="left"
-          >
-            <div>
-              <div>
-                <div class="overlay">
-                  <small>upcoming</small>
-                </div>
-                <div class="overlayDays">
-                  <small>223 Days</small>
-                </div>
-                <div class="eventType">
-                  <small>Free</small>
-                </div>
-              </div>
-              <b-card-img
-                class="eventCardimg"
-                src="https://i.imgur.com/qAoPWWO.jpg"
-                alt="Conference Meeting"
-                top="true"
-                style="min-height: 15rem; min-width: 15rem;"
-              >
-              </b-card-img>
-            </div>
-            <b-card-body>
-              <a href="#" class="card-link">Start Date</a>
-              <small class="line-v">|</small>
-              <a href="#" class="card-link">End Date</a>
-              <small class="line-v">|</small>
-              <a href="#" class="card-link">Location</a>
-            </b-card-body>
-            <b-card-body
-              title="Global Marketing Conference"
-              class="Card-text"
-              title-tag="h5"
-              sub-title="Event Company"
-            >
-            </b-card-body>
-            <b-card-footer class="footerTag">Business Seminars</b-card-footer>
-          </b-card>
-        </b-col>
+        <event-card
+          v-for="event in displayEvent"
+          :key="event.id"
+          :eventName="event.eventName"
+          :startDate="event.startDate"
+          :endDate="event.endDate"
+          :ticketType="event.ticketType"
+          :category="event.catergory"
+          :summary="event.summary"
+          :description="event.description"
+          :imageURL="event.imageURL"
+          :order="event.order"
+          :addinfos="event.additionalInfos"
+          :dateCreated="event.dateCreated"
+          :version="event.version"
+          :location="event.location"
+        ></event-card>
+      </b-row>
+       <b-row>
+        <b-pagination
+          v-model="currentPage"
+          :total-rows="rows"
+          :per-page="perPage"
+          first-text="First"
+          prev-text="Prev"
+          next-text="Next"
+          last-text="Last"
+          @input="paginate(currentPage)"
+        ></b-pagination>
       </b-row>
       <b-row col="1" align-h="center" align-v="center" style="height: 150px">
         <b-col cols="auto">
@@ -166,9 +54,10 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-modal v-model="modalShow" centered="true">
+    <!-- Modal HTML Here
+    <b-modal v-model="modalShow" centered>
       <template v-slot:modal-header="{ close }">
-        <!-- Emulate built in modal header close button action -->
+        Emulate built in modal header close button action
         <h5>Global Marketing Conference</h5>
         <b-button size="sm" variant="outline-variant" @click="close()">
           X
@@ -195,29 +84,57 @@
       </h6>
       <template v-slot:modal-footer="{ register }">
         <b class="footertext">Business and Seminars</b>
-        <!-- Emulate built in modal footer ok and cancel button actions -->
+        Emulate built in modal footer ok and cancel button actions
         <b-button size="sm" variant="success" @click="register()">
           register
         </b-button>
       </template>
       <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-   ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-   voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
       </p>
     </b-modal>
+    to here -->
   </div>
 </template>
 
 <script>
+import eventCards from "@/components/EventCards.vue";
 export default {
+  components: { "event-card": eventCards },
   name: "upcomingEvents",
   data() {
     return {
-      modalShow: false
+      modalShow: false,
+      event: [],
+      displayEvent: [],
+      currentPage: 1,
+      rows: 1,
+      perPage: 3
     };
+  },
+  mounted() {
+    this.fetchData();
+  },
+
+  methods: {
+    async fetchData() {
+      const res = await fetch("event.json");
+      const val = await res.json();
+      this.event = val;
+      this.displayEvent = val.slice(0, 3);
+      this.rows = this.event.length;
+      console.log(val);
+    },
+    paginate (currentPage) {
+      const start = (currentPage - 1) * this.perPage;
+      this.displayEvent = this.event.slice(start, start+3);
+}
   }
 };
 </script>

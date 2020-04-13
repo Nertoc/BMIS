@@ -72,7 +72,7 @@
 
 <script>
 export default {
-  name: "footer"
+  name: "bmisFooter"
 };
 </script>
 

@@ -33,8 +33,7 @@
           <h6>Host your event and collect feedback</h6>
         </b-col>
       </b-row>
-            <b-row style="height: 100px">
-        </b-row>
+      <b-row style="height: 100px"> </b-row>
     </b-container>
   </div>
 </template>
