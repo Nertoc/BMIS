@@ -18,7 +18,7 @@
                   <b-button
                     class="loginButton"
                     variant="link"
-                    v-b-modal.modal-1
+                    v-b-modal.modal-login
                   >
                     <i class="fas fa-fingerprint"></i>
                     <b-nav-text class="loginText">
@@ -51,11 +51,11 @@
     </b-container>
     <div>
       <b-modal
-        id="modal-1"
+        id="modal-login"
         size="lg"
         title="Login to your account here."
-        hide-footer,
         class="login modal"
+        hide-footer
       >
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
           <b-form-group

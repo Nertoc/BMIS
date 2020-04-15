@@ -1,55 +1,117 @@
 <template>
-  <b-col>
-    <b-card
-      no-body
-      tag="article"
-      style="max-width: 20rem; min-width: 15rem;"
-      class="carding"
-      align="left"
-    >
-      <div>
+  <div>
+    <b-col>
+      <b-card
+        no-body
+        tag="article"
+        style="max-width: 20rem; min-width: 15rem;"
+        class="carding"
+        align="left"
+      >
         <div>
-          <div class="overlay">
-            <small v-text="startDate"></small>
+          <div>
+            <div class="overlay">
+              <small v-text="startDate"></small>
+            </div>
+            <div class="overlayDays">
+              <small v-text="endDate"></small>
+            </div>
+            <div class="eventType">
+              <small v-text="ticketType"></small>
+            </div>
           </div>
-          <div class="overlayDays">
-            <small v-text="endDate"></small>
-          </div>
-          <div class="eventType">
-            <small v-text="ticketType"></small>
-          </div>
+          <b-card-img
+            class="eventCardimg"
+            :src="imageURL"
+            alt="Conference Meeting"
+            top
+            style="min-height: 15rem; min-width: 15rem; max-height: 15rem"
+          >
+          </b-card-img>
         </div>
-        <b-card-img
-          class="eventCardimg"
-          :src="imageURL"
-          alt="Conference Meeting"
-          top
-          style="min-height: 15rem; min-width: 15rem; max-height: 15rem"
-        >
-        </b-card-img>
-      </div>
-      <b-card-body>
-        <a href="#" class="card-link" v-text="startDate"></a>
-        <small class="line-v">|</small>
-        <a href="#" class="card-link" v-text="endDate"></a>
-        <small class="line-v">|</small>
-        <a href="#" class="card-link" v-text="location"></a>
-        <b-button
-          variant="link"
-          class="cardTitle text-left"
-        >
-          <b-card-title :title="eventName"></b-card-title>
-        </b-button>
-        <b-card-sub-title v-text="dateCreated"></b-card-sub-title>
-      </b-card-body>
-      <b-card-footer class="footerTag" v-text="category"></b-card-footer>
-    </b-card>
-  </b-col>
+        <b-card-body>
+          <a href="#" class="card-link" v-text="startDate"></a>
+          <small class="line-v">|</small>
+          <a href="#" class="card-link" v-text="endDate"></a>
+          <small class="line-v">|</small>
+          <a href="#" class="card-link" v-text="location"></a>
+          <b-button
+            variant="link"
+            class="cardTitle text-left"
+            v-b-modal="eventModalId"
+          >
+            <b-card-title :title="eventName"></b-card-title>
+          </b-button>
+
+          <b-card-sub-title v-text="dateCreated"></b-card-sub-title>
+        </b-card-body>
+        <b-card-footer class="footerTag" v-text="category"></b-card-footer>
+        <b-modal :id="eventModalId" centered>
+          <template v-slot:modal-header="{ close }">
+            <!-- Emulate built in modal header close button action -->
+            <h5 v-text="eventName"></h5>
+            <b-button size="sm" variant="outline-variant" @click="close()">
+              <i class="fas fa-window-close"></i>
+            </b-button>
+          </template>
+          <div>
+            <div class="overlay">
+              <small v-text="startDate"></small>
+            </div>
+            <div class="overlayDays">
+              <small v-text="endDate"></small>
+            </div>
+            <div class="eventType">
+              <small v-text="ticketType"></small>
+            </div>
+            <b-img
+              class="eventCardimg"
+              :src="imageURL"
+            ></b-img>
+          </div>
+          <br />
+          <h6 v-text="subTitle"></h6>
+          <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+           <template v-slot:modal-footer="{ register }">
+            <b class="footertext">Business and Seminars</b>
+          <!--   Emulate built in modal footer ok and cancel button actions -->
+            <b-button size="sm" variant="success" @click="register()">
+              register
+            </b-button>
+          </template>
+        </b-modal>
+      </b-card>
+    </b-col>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ["eventName", "startDate", "endDate", "location", "ticketType", "dateCreated", "category", "imageURL"]
+  props: [
+    "eventName",
+    "startDate",
+    "endDate",
+    "location",
+    "ticketType",
+    "dateCreated",
+    "category",
+    "imageURL",
+    "id",
+    "subTitle"
+  ],
+  computed: {
+    eventModalId() {
+      return `eventModal-${this.id}`;
+    }
+  }
 };
 </script>
 
@@ -81,6 +143,8 @@ export default {
   padding-right: 5px;
   padding-bottom: 0px;
   border-top-left-radius: 5px;
+      width: 30%;
+  text-align: right;
 }
 .overlayDays {
   position: absolute;
@@ -94,19 +158,22 @@ export default {
   padding-bottom: 5px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 15px;
+    width: 30%;
+  text-align: right;
 }
 .eventType {
   position: absolute;
   left: 0px;
-  top: 265px;
+  top: 25%;
   background-color: rgb(106, 182, 207);
   color: white;
-  width: 60px;
-  text-align: center;
+  width: 20%;
+  text-align: left;
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 5px;
   border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 .footerTag {
   text-align: center;

@@ -23,7 +23,7 @@
           :endDate="event.endDate"
           :ticketType="event.ticketType"
           :category="event.catergory"
-          :summary="event.summary"
+          :subTitle="event.summary"
           :description="event.description"
           :imageURL="event.imageURL"
           :order="event.order"
@@ -31,9 +31,10 @@
           :dateCreated="event.dateCreated"
           :version="event.version"
           :location="event.location"
+          :id="event.id"
         ></event-card>
       </b-row>
-       <b-row>
+      <b-row>
         <b-pagination
           v-model="currentPage"
           :total-rows="rows"
@@ -54,67 +55,24 @@
         </b-col>
       </b-row>
     </b-container>
-    <!-- Modal HTML Here
-    <b-modal v-model="modalShow" centered>
-      <template v-slot:modal-header="{ close }">
-        Emulate built in modal header close button action
-        <h5>Global Marketing Conference</h5>
-        <b-button size="sm" variant="outline-variant" @click="close()">
-          X
-        </b-button>
-      </template>
-      <div>
-        <div class="overlaymodal">
-          <small>upcoming</small>
-        </div>
-        <div class="overlayDaysmodal">
-          <small>223 Days</small>
-        </div>
-        <div class="eventTypemodal">
-          <small>Free</small>
-        </div>
-        <b-img
-          class="eventCardimgmodal"
-          src="https://images.pexels.com/photos/705792/pexels-photo-705792.jpeg"
-        ></b-img>
-      </div>
-      <h5 class="modalTitle">Global Innovation Conference</h5>
-      <h6>
-        Highlights on global breakthrough in I.T. Industry
-      </h6>
-      <template v-slot:modal-footer="{ register }">
-        <b class="footertext">Business and Seminars</b>
-        Emulate built in modal footer ok and cancel button actions
-        <b-button size="sm" variant="success" @click="register()">
-          register
-        </b-button>
-      </template>
-      <p>
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-    </b-modal>
-    to here -->
   </div>
 </template>
 
 <script>
 import eventCards from "@/components/EventCards.vue";
+import { mapGetters } from "vuex";
 export default {
   components: { "event-card": eventCards },
   name: "upcomingEvents",
+  computed: {
+    ...mapGetters(["event", "displayEvent", "rows"])
+  },
   data() {
     return {
-      modalShow: false,
-      event: [],
-      displayEvent: [],
+      //event: [],
+      // displayEvent: [],
       currentPage: 1,
-      rows: 1,
+      // rows: 1,
       perPage: 3
     };
   },
@@ -124,17 +82,20 @@ export default {
 
   methods: {
     async fetchData() {
-      const res = await fetch("event.json");
-      const val = await res.json();
-      this.event = val;
-      this.displayEvent = val.slice(0, 3);
-      this.rows = this.event.length;
-      console.log(val);
+      await this.$store.dispatch("fetchEvent");
+      console.log("test", this.$store.getters.event);
+      // const res = await fetch("event.json");
+      // const val = await res.json();
+      // this.event = this.event;
+      // this.displayEvent = this.event.slice(0, 3);
+      // this.rows = this.event.length;
+      console.log(this.event);
     },
-    paginate (currentPage) {
-      const start = (currentPage - 1) * this.perPage;
-      this.displayEvent = this.event.slice(start, start+3);
-}
+    paginate(currentPage) {
+     // const start = (currentPage - 1) * this.perPage;
+     // this.displayEvent = this.event.slice(start, start + 3);
+    this.$store.dispatch("paginate", { currentPage, perPage: this.perPage });
+    }
   }
 };
 </script>
