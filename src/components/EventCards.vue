@@ -81,7 +81,7 @@
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
            <template v-slot:modal-footer="{ register }">
-            <b class="footertext">Business and Seminars</b>
+            <b class="footertext" v-text="category"></b>
           <!--   Emulate built in modal footer ok and cancel button actions -->
             <b-button size="sm" variant="success" @click="register()">
               register

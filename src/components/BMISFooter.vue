@@ -108,5 +108,6 @@ export default {
 }
 .horZ {
   background-color: blanchedalmond;
+  width: 58%;
 }
 </style>

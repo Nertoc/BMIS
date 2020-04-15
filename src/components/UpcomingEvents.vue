@@ -48,7 +48,7 @@
       </b-row>
       <b-row col="1" align-h="center" align-v="center" style="height: 150px">
         <b-col cols="auto">
-          <b-button class="viewEvents">
+          <b-button variant="pink" size="lg">
             <i class="fas fa-calendar-day"></i>
             View All Events
           </b-button>
@@ -89,7 +89,6 @@ export default {
       // this.event = this.event;
       // this.displayEvent = this.event.slice(0, 3);
       // this.rows = this.event.length;
-      console.log(this.event);
     },
     paginate(currentPage) {
      // const start = (currentPage - 1) * this.perPage;
@@ -101,142 +100,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.eventCardimg {
-  width: 100%;
-  height: 300pxpx;
-  object-fit: cover;
-  background-position: center;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.card-link {
-  font-size: 0.8rem;
-}
-.line-v {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.overlay {
-  position: absolute;
-  right: 0px;
-  top: 20px;
-  background-color: rgba($color: midnightblue, $alpha: 0.8);
-  color: white;
-  font-size: 17px;
-  width: 80px;
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 0px;
-  border-top-left-radius: 5px;
-}
-.overlayDays {
-  position: absolute;
-  right: 0px;
-  top: 44px;
-  background-color: rgba($color: purple, $alpha: 0.8);
-  color: white;
-  width: 80px;
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 15px;
-}
-.eventType {
-  position: absolute;
-  left: 0px;
-  top: 265px;
-  background-color: rgb(106, 182, 207);
-  color: white;
-  width: 60px;
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  border-top-right-radius: 15px;
-}
-.footerTag {
-  text-align: center;
-}
 .mb-2 {
   border-radius: 20px;
-}
-.carding {
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 20px;
-  margin-bottom: 10%;
-}
-.viewEvents {
-  font-size: 15px;
-  padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  background-color: blueviolet;
-}
-.fas {
-  align-content: center;
-}
-.subtitle {
-  margin-bottom: 30px;
-}
-.cardTitle {
-  margin-left: -15px;
-  color: #2c3e50;
-}
-.eventCardimgmodal {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background-position: center;
-}
-.overlaymodal {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background-color: rgba($color: midnightblue, $alpha: 0.8);
-  color: white;
-  font-size: 17px;
-  width: 80px;
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 0px;
-  border-top-left-radius: 5px;
-}
-.overlayDaysmodal {
-  position: absolute;
-  right: 20px;
-  top: 44px;
-  background-color: rgba($color: purple, $alpha: 0.8);
-  color: white;
-  width: 80px;
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 15px;
-}
-.eventTypemodal {
-  position: absolute;
-  left: 20px;
-  top: 265px;
-  background-color: rgb(106, 182, 207);
-  color: white;
-  width: 60px;
-  text-align: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-  border-top-right-radius: 15px;
-}
-.modalTitle {
-  padding-top: 20px;
 }
 .footertext {
   float: left;
   padding-right: 50px;
+}
+.subtitle {
+  margin-bottom: 3%;
 }
 </style>
