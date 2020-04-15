@@ -362,3 +362,34 @@ export default {
   padding-right: 50px;
 }
 </style>
+
+
+<!--you can create one eventCard and you can add more cards by using JSON file.-->
+
+<!-- for example
+
+    <b-card
+  :title="eventName"
+  img-src="https://picsum.photos/250/220/?image=25"
+  img-alt="Events-info"
+  img-top
+  tag="article"
+  style="max-width:20rem"
+  class="mb-2"
+    >
+    <b-text> Lorem ipsum dolor sit amet, consectetur 
+      adipisicing elit. 
+    </b-text>
+       <b-button
+          v-b-tooltip.hover
+          title="read more"
+          v-b-modal="modalId"
+          variant="secondary"
+          >View</b-button
+        >
+        <b-modal :id="modalId" title="WEDDING PARTIES">
+          <p class="my-4">Lorem ipsum dolor sit amet, consectetur 
+      adipisicing elit. </p>
+        </b-modal>
+
+      --->

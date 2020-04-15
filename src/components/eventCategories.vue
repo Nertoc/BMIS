@@ -156,3 +156,7 @@ export default {
   color: white;
 }
 </style>
+
+<!-- you can  create a seperate SCSS for both within your App.vue file and incorporate all your styling attributes inside there.-->
+
+<!--you can create one eventCategory card and you can add more cards by using JSON file.-->

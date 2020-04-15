@@ -1,26 +1,28 @@
 <template>
-  <div id="app">
-    <div class="bgImage">
-      <TopHeader />
-      <titlePage />
+    <!--- div #app is being called -->
+  <div id="app"> <!--div #app is being called -->
+    <div class="bgImage"> 
+      <TopHeader /> <!--the 'TopHeader' component is being called-->
+      <titlePage />   <!-- the 'titlePage' component is being called-->-->
     </div>
     <div>
-      <upcomingEvents />
+      <upcomingEvents /> 
     </div>
-    <div class="catImg">
-      <eventCategories />
+    <div class="catImg"> <!--class "catImg" is being called */ -->
+      <eventCategories /> <!-- the 'eventCategories' component is being called-->
+    </div>
+    <div>                 
+      <manageEvents /> <!-- the 'manageEvents' component is being called-->
     </div>
     <div>
-      <manageEvents />
-    </div>
-    <div>
-      <bmisFooter />
+      <bmisFooter /> <!-- the 'bmisFooter' component is being called-->
     </div>
     <!-- add section above the green inside div containers -->
   </div>
 </template>
 
 <script>
+/* section where all the components get imported and used to each file*/
 import TopHeader from "@/components/TopHeader.vue";
 import titlePage from "@/components/TitlePage.vue";
 import upcomingEvents from "@/components/UpcomingEvents.vue";
@@ -28,7 +30,8 @@ import eventCategories from "@/components/eventCategories.vue";
 import manageEvents from "@/components/EventManagement.vue";
 import bmisFooter from "@/components/footer.vue";
 
-export default {
+/* section where all the components are being exported to use */
+export default { 
   components: {
     TopHeader,
     titlePage,
@@ -40,6 +43,7 @@ export default {
 };
 </script>
 
+<!--the styling sheet section -->
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap");
 #app {
@@ -79,3 +83,6 @@ export default {
   }
 }
 </style>
+
+<!--- I agree importing all the components in one file.->
+

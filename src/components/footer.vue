@@ -110,3 +110,5 @@ export default {
   background-color: blanchedalmond;
 }
 </style>
+ <!-- you can  create a seperate SCSS for both within your App.vue file and incorporate all your styling attributes inside there.-->
+

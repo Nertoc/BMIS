@@ -77,3 +77,4 @@ export default {
   border-color: transparent;
 }
 </style>
+ <!-- you can  create a seperate SCSS for both within your App.vue file and incorporate all your styling attributes inside there.-->
