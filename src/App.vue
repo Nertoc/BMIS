@@ -26,7 +26,7 @@ import titlePage from "@/components/TitlePage.vue";
 import upcomingEvents from "@/components/UpcomingEvents.vue";
 import eventCategories from "@/components/eventCategories.vue";
 import manageEvents from "@/components/EventManagement.vue";
-import bmisFooter from "@/components/footer.vue";
+import bmisFooter from "@/components/BMISFooter.vue";
 
 export default {
   components: {

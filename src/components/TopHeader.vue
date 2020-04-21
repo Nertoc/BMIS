@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container>
-      <b-row style="width: 110%" align-h="centre">
+      <b-row style="width: 110%" align-h="center">
         <b-col>
           <b-navbar toggleable="xl" variant="faded" type="dark">
             <i class="fas fa-ticket-alt fa-3x"></i>
@@ -18,7 +18,7 @@
                   <b-button
                     class="loginButton"
                     variant="link"
-                    v-b-modal.modal-1
+                    v-b-modal.modal-login
                   >
                     <i class="fas fa-fingerprint"></i>
                     <b-nav-text class="loginText">
@@ -51,11 +51,11 @@
     </b-container>
     <div>
       <b-modal
-        id="modal-1"
+        id="modal-login"
         size="lg"
         title="Login to your account here."
-        hide-footer="true"
         class="login modal"
+        hide-footer
       >
         <b-form @submit="onSubmit" @reset="onReset" v-if="show">
           <b-form-group
@@ -93,9 +93,7 @@
             </b-form-checkbox-group>
           </b-form-group>
 
-          <b-button type="submit" variant="primary" block="true"
-            >Submit</b-button
-          >
+          <b-button type="submit" variant="primary" block>Submit</b-button>
         </b-form>
       </b-modal>
     </div>

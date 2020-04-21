@@ -72,7 +72,7 @@
 
 <script>
 export default {
-  name: "footer"
+  name: "bmisFooter"
 };
 </script>
 
@@ -108,5 +108,6 @@ export default {
 }
 .horZ {
   background-color: blanchedalmond;
+  width: 58%;
 }
 </style>
